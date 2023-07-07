@@ -1,4 +1,7 @@
-class Cell:
+from abc import ABC, abstractmethod
+
+
+class Cell(ABC):
 
     def __init__(self, row, col):
         self.row = row
@@ -13,6 +16,10 @@ class Cell:
 
         return sum([above, below, left, right])
 
+    @abstractmethod
+    def will_stay_alive(self, grid):
+        pass
+
 
 class Critter(Cell):
 
@@ -22,6 +29,9 @@ class Critter(Cell):
 
 
 class Space(Cell):
+
+    def will_stay_alive(self, grid):
+        raise RuntimeError("Space cell is always dead")
 
     def will_be_born(self, grid):
         return 1 if self.get_neighbor_count(grid) == 3 else 0
