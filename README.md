@@ -5,7 +5,7 @@
 
 ## Overview
 
-This kata complements [Clean Code: SOLID, Ep. 11 - Liskov Substituion Principle](https://cleancoders.com/episode/clean-code-episode-11-p1).
+This kata complements [Clean Code: SOLID, Ep. 11 - Liskov Substitution Principle](https://cleancoders.com/episode/clean-code-episode-11-p1).
 
 This repository contains two exercises designed to improve your skills in
 code refactoring, with a focus on the Liskov Substitution Principle (LSP).
@@ -29,7 +29,6 @@ correctness of the program.
 1. Review the current code base and identify parts that violate the LSP.
 2. Refactor the violating code to align with the LSP.
 3. Make sure all the tests still pass after your refactoring.
-4. Submit your refactored code for review.
 
 Be sure to run the tests before and after your refactoring to make sure you
 haven't changed the game's behavior.
