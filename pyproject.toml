@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "bootstrap-python-kata"
+name = "game-of-life-refactoring-python-kata"
 version = "1.0.0"
-description = "Bootstrap for Python katas"
+description = "Game of life refactoring kata in Python"
 authors = ["Codding Cuddles"]
 
 [tool.poetry.dependencies]
