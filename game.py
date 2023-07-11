@@ -3,18 +3,24 @@ from abc import ABC, abstractmethod
 
 class Cell(ABC):
 
-    def __init__(self, row, col):
+    def __init__(self, row, column):
         self.row = row
-        self.column = col
+        self.column = column
 
     def get_neighbor_count(self, grid):
         rows, columns = len(grid), len(grid[0])
-        above = grid[(self.row - 1) % rows][self.column]
-        below = grid[(self.row + 1) % rows][self.column]
+
+        above = 0
+        below = 0
+        for i in range(-1, 2):
+            col = (self.column + i + columns) % columns
+            above += grid[(self.row - 1) % rows][col]
+            below += grid[(self.row + 1) % rows][col]
+
         left = grid[self.row][(self.column - 1) % columns]
         right = grid[self.row][(self.column + 1) % columns]
 
-        return sum([above, below, left, right])
+        return above + below + left + right
 
     @abstractmethod
     def will_stay_alive(self, grid):
