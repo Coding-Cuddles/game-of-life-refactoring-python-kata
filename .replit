@@ -17,3 +17,22 @@ start = "pylsp"
 [debugger]
 support = false
 
+[env]
+VIRTUAL_ENV = "${REPL_HOME}/venv"
+PATH = "${VIRTUAL_ENV}/bin"
+PYTHONPATH = "$PYTHONHOME/lib/python3.10:${VIRTUAL_ENV}/lib/python3.10/site-packages"
+REPLIT_POETRY_PYPI_REPOSITORY = "https://package-proxy.replit.com/pypi/"
+MPLBACKEND = "TkAgg"
+POETRY_CACHE_DIR = "${REPL_HOME}/.cache/pypoetry"
+
+[packager]
+language = "python3"
+ignoredPackages = ["unit_tests"]
+
+[packager.features]
+enabledForHosting = false
+packageSearch = true
+guessImports = true
+
+[unitTest]
+language = "python3"
