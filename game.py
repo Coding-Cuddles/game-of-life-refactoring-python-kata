@@ -50,8 +50,10 @@ class Game:
 
     def iterate(self):
         new_grid = []
+
         for row_num, row in enumerate(self.grid):
             new_row = []
+
             for col_num, cell in enumerate(row):
                 if cell:
                     cell_obj = Critter(row_num, col_num)
@@ -60,4 +62,5 @@ class Game:
                     cell_obj = Space(row_num, col_num)
                     new_row.append(cell_obj.will_be_born(self.grid))
             new_grid.append(new_row)
+
         self.grid = new_grid
