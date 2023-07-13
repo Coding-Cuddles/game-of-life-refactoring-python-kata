@@ -51,6 +51,25 @@ def test_over_population():
     ]
 
 
+def test_over_population_across_boundaries():
+    game = Game([
+        [1, 0, 0, 1, 1],
+        [0, 0, 0, 0, 1],
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 1],
+    ])
+    game.iterate()
+
+    assert game.grid == [
+        [1, 0, 0, 1, 0],
+        [1, 0, 0, 1, 1],
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
+        [1, 0, 0, 1, 1],
+    ]
+
+
 def test_reproduction():
     game = Game([
         [0, 0, 0, 0, 0],
