@@ -14,11 +14,11 @@ class Cell(ABC):
         below = 0
         for i in range(-1, 2):
             col = (self.column + i + columns) % columns
-            above += grid[(self.row - 1) % rows][col]
-            below += grid[(self.row + 1) % rows][col]
+            above += grid[(self.row - 1 + rows) % rows][col]
+            below += grid[(self.row + 1 + rows) % rows][col]
 
-        left = grid[self.row][(self.column - 1) % columns]
-        right = grid[self.row][(self.column + 1) % columns]
+        left = grid[self.row][(self.column - 1 + columns) % columns]
+        right = grid[self.row][(self.column + 1 + columns) % columns]
 
         return above + below + left + right
 
