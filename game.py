@@ -2,7 +2,6 @@ from abc import ABC, abstractmethod
 
 
 class Cell(ABC):
-
     def __init__(self, row, column):
         self.row = row
         self.column = column
@@ -28,14 +27,12 @@ class Cell(ABC):
 
 
 class Critter(Cell):
-
     def will_stay_alive(self, grid):
         neighbors = self.get_neighbor_count(grid)
         return 1 if 1 < neighbors < 4 else 0
 
 
 class Space(Cell):
-
     def will_stay_alive(self, grid):
         raise RuntimeError("Space cell is always dead")
 
@@ -44,7 +41,6 @@ class Space(Cell):
 
 
 class Game:
-
     def __init__(self, grid):
         self.grid = grid
 

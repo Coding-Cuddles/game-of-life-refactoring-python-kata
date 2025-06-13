@@ -3,11 +3,13 @@ from game import Game
 
 
 def test_under_population():
-    game = Game([
-        [0, 0, 0],
-        [0, 1, 0],
-        [0, 0, 0],
-    ])
+    game = Game(
+        [
+            [0, 0, 0],
+            [0, 1, 0],
+            [0, 0, 0],
+        ]
+    )
     game.iterate()
 
     assert game.grid == [
@@ -18,11 +20,13 @@ def test_under_population():
 
 
 def test_two_or_three_neighbors_live_on():
-    game = Game([
-        [0, 0, 0, 0, 0],
-        [0, 1, 1, 1, 0],
-        [0, 0, 0, 0, 0],
-    ])
+    game = Game(
+        [
+            [0, 0, 0, 0, 0],
+            [0, 1, 1, 1, 0],
+            [0, 0, 0, 0, 0],
+        ]
+    )
     game.iterate()
 
     assert game.grid == [
@@ -33,13 +37,15 @@ def test_two_or_three_neighbors_live_on():
 
 
 def test_over_population():
-    game = Game([
-        [0, 0, 0, 0, 0],
-        [0, 0, 1, 0, 0],
-        [0, 1, 1, 1, 0],
-        [0, 0, 1, 0, 0],
-        [0, 0, 0, 0, 0],
-    ])
+    game = Game(
+        [
+            [0, 0, 0, 0, 0],
+            [0, 0, 1, 0, 0],
+            [0, 1, 1, 1, 0],
+            [0, 0, 1, 0, 0],
+            [0, 0, 0, 0, 0],
+        ]
+    )
     game.iterate()
 
     assert game.grid == [
@@ -52,13 +58,15 @@ def test_over_population():
 
 
 def test_over_population_across_boundaries():
-    game = Game([
-        [1, 0, 0, 1, 1],
-        [0, 0, 0, 0, 1],
-        [0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 1],
-    ])
+    game = Game(
+        [
+            [1, 0, 0, 1, 1],
+            [0, 0, 0, 0, 1],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 1],
+        ]
+    )
     game.iterate()
 
     assert game.grid == [
@@ -71,12 +79,14 @@ def test_over_population_across_boundaries():
 
 
 def test_reproduction():
-    game = Game([
-        [0, 0, 0, 0, 0],
-        [0, 0, 1, 0, 0],
-        [0, 1, 0, 1, 0],
-        [0, 0, 0, 0, 0],
-    ])
+    game = Game(
+        [
+            [0, 0, 0, 0, 0],
+            [0, 0, 1, 0, 0],
+            [0, 1, 0, 1, 0],
+            [0, 0, 0, 0, 0],
+        ]
+    )
     game.iterate()
 
     assert game.grid == [
