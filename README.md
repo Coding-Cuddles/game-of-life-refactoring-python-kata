@@ -1,10 +1,12 @@
-# Game of Life Refactoring Python Kata
+# Game of Life refactoring kata in Python
 
 [![CI](https://github.com/Coding-Cuddles/game-of-life-refactoring-python-kata/actions/workflows/main.yml/badge.svg)](https://github.com/Coding-Cuddles/game-of-life-refactoring-python-kata/actions/workflows/main.yml)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ## Overview
+
+This kata complements [Clean Code: SOLID, Ep. 11 - Liskov Substitution Principle](https://cleancoders.com/episode/clean-code-episode-11-p1).
 
 This repository contains two exercises designed to improve your skills in
 code refactoring, with a focus on the Liskov Substitution Principle (LSP).
