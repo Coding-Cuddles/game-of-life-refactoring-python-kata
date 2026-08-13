@@ -4,6 +4,10 @@
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
+Refactor Conway's Game of Life toward the Liskov Substitution Principle
+without changing its behavior. Setup is complete when all five starter tests
+pass.
+
 ## Overview
 
 This kata complements [Clean Code: SOLID, Ep. 11 - Liskov Substitution Principle](https://cleancoders.com/episode/clean-code-episode-11-p1).
@@ -45,8 +49,8 @@ Here are the new cell types to implement:
 1. **Immortal Cell**: This cell type never dies. Once born, it stays alive
    through all the subsequent generations.
 2. **Reproductive Cell**: This cell type reproduces faster than a normal cell.
-   It can make a new cell in the neighborhood with 2-3 neighbors instead of
-   three.
+   It can make a new cell in the neighborhood with two or three neighbors
+   instead of exactly three.
 3. **Lazy Cell**: This cell type requires more neighbors to survive. It stays
    alive only if it has exactly three neighbors.
 
